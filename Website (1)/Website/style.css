@@ -29,36 +29,7 @@ body::before {
     z-index: -1;
   }
 
-/* Navbar Styles */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    backdrop-filter: blur(8px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
 
-
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 5rem;
-}
-
-.nav-links a {
-    color: #b3c7f9;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #4fc3f7;
-}
 
 .discord-link {
     display: flex;
