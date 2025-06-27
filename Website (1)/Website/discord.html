@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Your Clan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="panel.css" />
+</head>
+<body>
+  <!-- Blurred iframe background -->
+  <div class="background-blur">
+    <iframe src="panel2.html" frameborder="0"></iframe>
+  </div>
+
+  <!-- Panel chooser overlay -->
+  <div class="panel-selector" onclick = "closePanel()">
+    <h1>Join the clan you chose</h1>
+    <div class="panels">
+      <div class="panel">
+        <a href="https://discord.gg/e7aJMxZ3" target="_blank">
+          <img src="tiger.png" alt="Panel 1" />
+          <span>Night</span>
+        </a>
+      </div>
+      <div class="panel">
+        <a href="https://discord.gg/Cz8T68Fp" target="_blank">
+          <img src="panel2.jpg" alt="Panel 2" />
+          <span>Dawnstar</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src = "list.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night List</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="tiger.png">
+
+    <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "list.css">
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href = "panel.html"><img src="tiger.png" alt="Server Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="night.html"><span>🏠 Home</span></a></li>
+                <li><a href="news.html"><span>📢 News</span></a></li>
+                <li><a href="list.html"><span>📚 Member list</span></a></li>
+                <li><a href="support.html"><span>🎟️ Support</span></a></li>
+            </ul>
+            <div class="discord-link">
+                <a href="discord.html">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+            </div>
+            
+            <div class="login-button">
+                <a href="login.html"><span>Logout</span></a>
+            </div>
+        </nav>
+    </header>
+    <br> <br>
+    
+</nav>
+
+<br> <br>
+    <main>
+       <!-- Sample content with user cards -->
+       <div class="content">
+        <div class="members-header">
+            <h1>Members</h1>
+            <p>Click on a member to view their details</p>
+        </div>
+        <div class="search-area">
+          <input type="text" class="search-input" placeholder="Search...">
+          <button class="search-button">Search</button>
+      </div>
+        <div class="members-panel-wrapper">
+            <div class="members-panel-box">
+                <div class="members-grid">
+                    <div class="user-card" onclick="openModal()">
+                        <img src="skin.png" alt="User Avatar" class="user-card-avatar">
+                        <div class="user-card-name">Purxy_</div>
+                    </div>
+                    <div class="user-card" onclick="openModal()">
+                        <img src="skin.png" alt="User Avatar" class="user-card-avatar">
+                        <div class="user-card-name">St3f0_</div>
+                    </div>
+                    <!-- Add more players here -->
+                    <div class="user-card" onclick="openModal()">
+                        <img src="skin.png" alt="User Avatar" class="user-card-avatar">
+                        <div class="user-card-name">Purxy_</div>
+                    </div>
+                    <div class="user-card" onclick="openModal()">
+                        <img src="skin.png" alt="User Avatar" class="user-card-avatar">
+                        <div class="user-card-name">Purxy_</div>
+                    </div>
+                    <div class="user-card" onclick="openModal()">
+                        <img src="skin.png" alt="User Avatar" class="user-card-avatar">
+                        <div class="user-card-name">Purxy_</div>
+                    </div>
+                    <div class="user-card" onclick="openModal()">
+                        <img src="skin.png" alt="User Avatar" class="user-card-avatar">
+                        <div class="user-card-name">Purxy_</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- User Modal -->
+<div class="modal" id="userModal">
+    <div class="modal-container">
+      
+      <!-- Left Side Modal -->
+      <div class="side-modal">
+        <h2 class="side-title">Description</h2>
+        <p class = "text" id="modalContent">His legacy lasted for 2+ years. He leaded Night for 3 seasons already and made our team achieve some great victories. It's not just the swordsman skills he had, but the leadership. Switched to Dawnstar due to getting bored from playing Minemalia.</p>
+      </div>
+  
+      <!-- Center Modal (Main Player Info) -->
+      <div class="player-content">
+        <div class="modal-header">
+          <h2>User Profile</h2>
+        </div>
+        <img src="150.png" alt="User Avatar" class="user-avatar">
+        <div class="user-info">
+          <div class="info-row">
+            <p class="modal-content">Username: Purxy_</p>
+            <p class="modal-content">Role: Unknown</p>
+            <p class="modal-content">Power: ????</p>
+            <p class="modal-content">Team: Dawnstar</p>
+          </div>
+          <br>
+          Status: <span style="color: #2ecc71;">Active</span>
+        </div>
+      </div>
+  
+      <!-- Right Side Modal -->
+      <div class="side-modal">
+        <h2 class="side-title">Contributions</h2>
+        <p class = "text" id="modalContent">Three won seasons thanks to him.</p>
+      </div>
+  
+    </div>
+  </div>
+  
+          
+    </main>
+    
+    <script src = "script.js"></script>
+    <script src = "list.js"></script>
+</body>
+</html>

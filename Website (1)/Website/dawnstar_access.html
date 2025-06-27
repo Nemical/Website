@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawnstar</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="panel2.png">
+
+    <link rel="stylesheet" href="home.css">
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href = "panel.html"><img src="panel2.png" alt="Server Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="panel.html"><span>🛡️ Teams</span></a></li>
+                
+            </ul>
+           
+            <div class="login-button">
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Dawnstar community</h1>
+            <br>
+            <p>Here are some old memories of us!</p>
+        </section>
+        <section class="placeholder-section vertical-panels">
+            <img src="placeholder.png" alt="Panel 1" class="panel-img" />
+            <img src="placeholder2.png" alt="Panel 2" class="panel-img" />
+          </section>
+          
+    </main>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn login-close">&times;</span>
+          <h2>Server Login</h2>
+          <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Enter</button>
+            <br><br>
+            <p>No account? <a href="#" class="register-link">Register</a></p>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Register Modal -->
+     <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn register-close">&times;</span>
+          <h2>Create an Account</h2>
+          <form>
+            <input type="text" placeholder="Username" required>
+            <select id = "email" required>
+                <option value="night">Night</option>
+                <option value="dawnstar">Dawnstar</option>
+            </select>
+            <input type="text" placeholder="Tell us more about you" required>
+            <input type="text" placeholder="Do you have any experience in servers we play" required>
+            <input type="text" placeholder="Gmail (to approve your request)" required>
+      
+      
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    <script src = "script.js"></script>
+</body>
+</html>
