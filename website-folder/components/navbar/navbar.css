@@ -1,0 +1,115 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(30, 42, 120, 0.3); /* Transparent background */
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 80px; /* Smaller logo for balance */
+  width: auto;
+  max-width: 10rem;
+  animation: 
+      breathe 3s ease-in-out infinite,
+      growl 4s ease infinite;
+  filter: drop-shadow(0 0 5px #fff);
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  animation: clawSwipe 0.5s ease;
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  position: relative;
+  color: #b3c7f9;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  letter-spacing: 2px;
+  padding: 0.5rem 0.8rem;
+  transition: color 0.3s, text-shadow 0.3s;
+  text-shadow: 0 2px 8px rgba(76,195,247,0.15);
+  overflow: hidden;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #4fc3f7 0%, #1e2a78 100%);
+  border-radius: 2px;
+  transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+}
+
+.nav-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #4fc3f7, 0 0 20px #1e2a78;
+}
+
+.nav-links a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+}
+
+.user-controls button {
+  background-color: #1e2a78;
+  font-size: 1.5rem;
+  color: #ffffff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(76,195,247,0.10);
+}
+
+.user-controls button:hover {
+  background-color: #4fc3f7;
+  color: #1e2a78;
+  box-shadow: 0 0 16px #4fc3f7;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes growl {
+  0%, 100% { filter: brightness(1) contrast(1); }
+  50% { filter: brightness(1.1) contrast(1.1); }
+}
+
+@keyframes clawSwipe {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
