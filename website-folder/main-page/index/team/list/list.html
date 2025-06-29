@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player List</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/components/navbar/navbar.css" />
+    <link rel="stylesheet" href="/main-page/index/team/list/list.css" />
+    <link rel="stylesheet" href="/components/modal/modal.css" />
+</head>
+<body>
+    <header>
+        <nav id="navbar"></nav>
+    </header>
+
+    <!-- Lightning intro section -->
+    <div class="playerlist-intro">
+      <h1 class="lightning-text">The list of members</h1>
+      <p class="playerlist-intro-desc">Browse the top members, their ranks, power points, and unique skills. Hover over each skill to see their mastery!</p>
+    </div>
+
+    <div class="playerlist-outer-wrapper">
+      <div class="playerlist-wrapper">
+        <div class="playerlist-header-row">
+          <span class="playerlist-header-label playerlist-header-username">Username</span>
+          <span class="playerlist-header-label playerlist-header-pp">Power Points (PP)</span>
+          <span class="playerlist-header-label playerlist-header-skills">Skills</span>
+          <input class="playerlist-search" type="text" placeholder="Search players..." />
+        </div>
+        <!-- Player Panel 1 -->
+        <div class="player-panel">
+          <img class="player-head" src="/pictures/Purxy_.png" alt="Purxy_ Head">
+          <div class="player-info">
+            <span class="player-name">Purxy_</span>
+            <span class="player-rank">
+              <img class="rank-icon" src="/pictures/founder_icon.png" alt="Founder" />
+              Founder
+            </span>
+          </div>
+          <div class="player-pp">
+            <span class="pp-label">PP</span>
+            <span class="pp-value">405</span>
+          </div>
+          <div class="player-skills">
+            <div class="skill-icon" data-skill="Influence" data-stars="5">
+              <img src="/pictures/skill1.png" alt="Influence" />
+              <div class="skill-tooltip">
+                <div class="skill-title">Influence</div>
+                <div class="skill-stars">★★★★★</div>
+              </div>
+            </div>
+            <div class="skill-icon" data-skill="PvP Skill" data-stars="4">
+              <img src="/pictures/skill2.png" alt="PvP Skill" />
+              <div class="skill-tooltip">
+                <div class="skill-title">PvP Skill</div>
+                <div class="skill-stars">★★★★☆</div>
+              </div>
+            </div>
+            <div class="skill-icon" data-skill="War Leading" data-stars="5">
+              <img src="/pictures/skill3.png" alt="War Leading" />
+              <div class="skill-tooltip">
+                <div class="skill-title">War Leading</div>
+                <div class="skill-stars">★★★★★</div>
+              </div>
+            </div>
+            <div class="skill-icon" data-skill="Grinding" data-stars="3">
+              <img src="/pictures/skill4.png" alt="Grinding" />
+              <div class="skill-tooltip">
+                <div class="skill-title">Grinding</div>
+                <div class="skill-stars">★★★☆☆</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Player Panel 2 -->
+        <div class="player-panel">
+          <img class="player-head" src="/pictures/MegaMind0007.png" alt="MegaMind Head">
+          <div class="player-info">
+            <span class="player-name">MegaMind0007</span>
+            <span class="player-rank">
+              <img class="rank-icon" src="/pictures/leader_icon.png" alt="Leader" />
+              Leader
+            </span>
+          </div>
+          <div class="player-pp">
+            <span class="pp-label">PP</span>
+            <span class="pp-value">330</span>
+          </div>
+          <div class="player-skills">
+            <div class="skill-icon" data-skill="Influence" data-stars="4">
+              <img src="/pictures/skill1.png" alt="Influence" />
+              <div class="skill-tooltip">
+                <div class="skill-title">Influence</div>
+                <div class="skill-stars">★★★★☆</div>
+              </div>
+            </div>
+            <div class="skill-icon" data-skill="PvP Skill" data-stars="5">
+              <img src="/pictures/skill2.png" alt="PvP Skill" />
+              <div class="skill-tooltip">
+                <div class="skill-title">PvP Skill</div>
+                <div class="skill-stars">★★★★★</div>
+              </div>
+            </div>
+            <div class="skill-icon" data-skill="War Leading" data-stars="4">
+              <img src="/pictures/skill3.png" alt="War Leading" />
+              <div class="skill-tooltip">
+                <div class="skill-title">War Leading</div>
+                <div class="skill-stars">★★★★☆</div>
+              </div>
+            </div>
+            <div class="skill-icon" data-skill="Grinding" data-stars="2">
+              <img src="/pictures/skill4.png" alt="Grinding" />
+              <div class="skill-tooltip">
+                <div class="skill-title">Grinding</div>
+                <div class="skill-stars">★★☆☆☆</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Player Panel 3 -->
+        <div class="player-panel">
+          <img class="player-head" src="/pictures/_FLAHMER.png" alt="_FLAHMER Head">
+          <div class="player-info">
+            <span class="player-name">_FLAHMER</span>
+            <span class="player-rank">
+              <img class="rank-icon" src="/pictures/co_leader_icon.png" alt="Co-Leader" />
+              Co-Leader
+            </span>
+          </div>
+          <div class="player-pp">
+            <span class="pp-label">PP</span>
+            <span class="pp-value">260</span>
+          </div>
+          <div class="player-skills">
+            <div class="skill-icon" data-skill="Influence" data-stars="3">
+              <img src="/pictures/skill1.png" alt="Influence" />
+              <div class="skill-tooltip">
+                <div class="skill-title">Influence</div>
+                <div class="skill-stars">★★★☆☆</div>
+              </div>
+            </div>
+            <div class="skill-icon" data-skill="PvP Skill" data-stars="3">
+              <img src="/pictures/skill2.png" alt="PvP Skill" />
+              <div class="skill-tooltip">
+                <div class="skill-title">PvP Skill</div>
+                <div class="skill-stars">★★★☆☆</div>
+              </div>
+            </div>
+            <div class="skill-icon" data-skill="War Leading" data-stars="4">
+              <img src="/pictures/skill3.png" alt="War Leading" />
+              <div class="skill-tooltip">
+                <div class="skill-title">War Leading</div>
+                <div class="skill-stars">★★★★☆</div>
+              </div>
+            </div>
+            <div class="skill-icon" data-skill="Grinding" data-stars="5">
+              <img src="/pictures/skill4.png" alt="Grinding" />
+              <div class="skill-tooltip">
+                <div class="skill-title">Grinding</div>
+                <div class="skill-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Player Details Modal Overlay -->
+    <div id="player-modal-overlay" class="player-modal-overlay" style="display:none;">
+      <div class="player-modal-container">
+        <!-- Left Modal -->
+        <div class="player-modal player-modal-left">
+          <div class="player-modal-section-title">Player Info</div>
+          <div class="player-modal-info-row"><b>Username:</b> <span id="modal-username"></span></div>
+          <div class="player-modal-info-row"><b>Rank:</b> <span id="modal-rank"></span></div>
+          <div class="player-modal-info-row"><b>Power Points:</b> <span id="modal-pp"></span></div>
+          <div class="player-modal-info-row"><b>Date:</b> <span id="modal-date"></span></div>
+          <div class="player-modal-info-row"><b>Status:</b> <span id="modal-status"></span></div>
+        </div>
+        <!-- Middle Modal -->
+        <div class="player-modal player-modal-middle">
+          <div class="player-modal-section-title">Player Data & Skills</div>
+          <img id="modal-skin" class="modal-skin-img" src="/pictures/skin_placeholder.png" alt="Player Skin" />
+          <div class="modal-skill-list" id="modal-skill-list"></div>
+        </div>
+        <!-- Right Modal -->
+        <div class="player-modal player-modal-right">
+          <div class="player-modal-section-title">Contributions</div>
+          <div id="modal-contributions">
+            <span>
+              <span class="contribution-item-icon-wrapper">
+                <img class="contribution-item-bg" src="/pictures/hotbar.png" alt="">
+                <img class="contribution-item-icon" src="ITEM_NAME_HERE" alt="ITEM_NAME_HERE" />
+              </span>
+              ITEM_NAME_HERE
+            </span>
+          </div>
+        </div>
+        <button class="player-modal-close" id="player-modal-close">&times;</button>
+      </div>
+    </div>
+
+    <script>
+      // Modal injection (if needed)
+      fetch('/components/modal/modal.html')
+        .then(res => res.text())
+        .then(html => {
+          document.body.insertAdjacentHTML('beforeend', html);
+        });
+    </script>
+    <script src="/components/modal/modal.js"></script>
+    <script src="/main.js"></script>
+    <script src="/components/navbar/navbar.js"></script>
+    <script src="/main-page/index/team/list/list.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team News</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/components/navbar/navbar.css" />
+    <link rel="stylesheet" href="/main-page/index/team/news/news.css" />
+    <link rel="stylesheet" href="/components/modal/modal.css" />
+</head>
+<body>
+    <header>
+        <nav id="navbar"></nav>
+    </header>
+<!-- <div class="leadership-table-wrapper">
+      <div class="leadership-table">
+        <div class="leadership-title">Leadership</div>
+        <div class="leader-row">
+          <img class="leader-head" src="/pictures/Purxy_.png" alt="Head 1">
+          <div class="leader-info">
+            <span class="leader-name">Purxy_</span>
+            <span class="leader-role">Founder </span>
+          </div>
+        </div>
+        <div class="leader-row">
+          <img class="leader-head" src="/pictures/MegaMind0007.png" alt="Head 2">
+          <div class="leader-info">
+            <span class="leader-name">MegaMind0007</span>
+            <span class="leader-role">Leader </span>
+          </div>
+        </div>
+        <div class="leader-row">
+          <img class="leader-head" src="/pictures/_FLAHMER.png" alt="Head 3">
+          <div class="leader-info">
+            <span class="leader-name">_FLAHMER</span>
+            <span class="leader-role">Co-Leader </span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <main>
+        <div class="news-panels-outer-wrapper"></div>
+      <div class="news-panels-wrapper">
+        <div class="news-panel" data-news="0">
+          <img class="news-panel-img" src="/pictures/night_logo.png" alt="News 1">
+          <div class="news-panel-content">
+            <h2 class="news-panel-title">First Announcement</h2>
+            <p class="news-panel-desc">This is a short description for the first news. Click to read more!</p>
+          </div>
+        </div>
+        <div class="news-panel" data-news="1">
+          <img class="news-panel-img" src="/pictures/night_logo.png" alt="News 2">
+          <div class="news-panel-content">
+            <h2 class="news-panel-title">Second Announcement</h2>
+            <p class="news-panel-desc">This is a short description for the second news. Click to read more!This is a short description for the second news. Click to read more!This is a short description for the second news. Click to read more!This is a short description for the second news. Click to read more!This is a short description for the second news. Click to read more!</p>
+          </div>
+        </div>
+        <div class="news-panel" data-news="2">
+          <img class="news-panel-img" src="/pictures/night_logo.png" alt="News 3">
+          <div class="news-panel-content">
+            <h2 class="news-panel-title">Third Announcement</h2>
+            <p class="news-panel-desc">This is a short description for the third news. Click to read more!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <!-- Modal and News scripts loader -->
+    <script>
+  // Inject modal.html (which contains both login/register and news modal)
+  fetch('/components/modal/modal.html')
+    .then(res => res.text())
+    .then(html => {
+      document.body.insertAdjacentHTML('beforeend', html);
+     
+    });
+</script>
+<script src = "/components/modal/modal.js"> </script>
+<script src="/main-page/index/team/news/news.js"></script>
+<script src="/main.js"></script>
+<script src="/components/navbar/navbar.js"></script>
+</body>
+</html>

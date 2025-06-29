@@ -1,0 +1,63 @@
+<div id="modal-overlay" class="modal-overlay" style="display:none;">
+  <div class="modal-box" id="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-tabs">
+      <button class="modal-tab active" id="login-tab" data-modal="login">Login</button>
+      <button class="modal-tab" id="register-tab" data-modal="register">Register</button>
+    </div>
+    <form id="login-form" class="modal-form">
+      <h2>Login</h2>
+      <label>
+        Username
+        <input type="text" name="login-username" required />
+      </label>
+      
+      <label>
+        Password
+        <input type="password" name="login-password" required />
+      </label>
+      
+      <button type="submit" class="modal-action-btn">Submit</button>
+    </form>
+    
+    <form id="register-form" class="modal-form" style="display:none;">
+      <h2>Register</h2>
+      <label>
+        Username
+        <input type="text" name="register-username" required />
+      </label>
+      <label>
+        Password
+        <input type="password" name="register-password" required />
+      </label>
+      <label>
+        Confirm Password
+        <input type="password" name="register-confirm" required />
+      </label>
+     <label>
+        Email
+        <input type="email" name="register-email" required />
+      </label>
+         <label>
+  Description 
+  <input type="text" name="register-description" required />
+</label>
+      <label>
+
+      <button type="submit" class="modal-action-btn">Submit</button>
+    </form>
+  </div>
+</div>
+ <!-- News modal -->
+<div id="news-modal-overlay" class="modal-overlay" style="display:none;">
+  <div class="modal-box news-modal-box" id="news-modal-box">
+    <button class="modal-close" id="news-modal-close" aria-label="Close">&times;</button>
+    <div class="news-modal-content">
+      <img id="news-modal-img" src="/pictures/night_logo.png" alt="News Image">
+      <div class="news-modal-text">
+        <h2 id="news-modal-title">Announcement Title</h2>
+        <p id="news-modal-desc">Full description of the announcement will appear here.</p>
+      </div>
+    </div>
+  </div>
+</div>
