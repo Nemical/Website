@@ -97,3 +97,48 @@ function initNewsModal() {
 }
 
 document.addEventListener('DOMContentLoaded', initNewsModal);
+
+function setupLoginDropdown() {
+  const loginBtn = document.getElementById('login-button');
+  const dropdown = document.getElementById('login-dropdown');
+  const profileLink = document.getElementById('profile-link');
+  if (!loginBtn || !dropdown) return;
+
+  loginBtn.addEventListener('mouseenter', () => {
+    dropdown.style.display = 'flex';
+  });
+  loginBtn.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      if (!dropdown.matches(':hover')) dropdown.style.display = 'none';
+    }, 120);
+  });
+  dropdown.addEventListener('mouseleave', () => {
+    dropdown.style.display = 'none';
+  });
+  dropdown.addEventListener('mouseenter', () => {
+    dropdown.style.display = 'flex';
+  });
+
+  // Profile link fetch (set dynamically)
+  if (profileLink) {
+    profileLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = '/profile.html';
+      // Or fetch dynamically:
+      // fetch('/api/getProfileUrl').then(res => res.text()).then(url => window.location.href = url);
+    });
+  }
+}
+
+// Instead of DOMContentLoaded, call this after navbar is loaded
+function waitForNavbarAndSetupDropdown() {
+  const loginBtn = document.getElementById('login-button');
+  if (!loginBtn) {
+    setTimeout(waitForNavbarAndSetupDropdown, 50);
+    return;
+  }
+  setupLoginDropdown();
+}
+
+// Call after DOMContentLoaded
+document.addEventListener('DOMContentLoaded', waitForNavbarAndSetupDropdown);

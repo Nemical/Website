@@ -9,6 +9,13 @@
     <li><a href="/main-page/index/team/support/support.html">Support</a></li>
   </ul>
   <div class="user-controls">
-    <button id="login-button">Login</button>
+    <div class="login-dropdown-wrapper">
+      <button id="login-button" class="login-btn">Login</button>
+      <div id="login-dropdown" class="login-dropdown-modal" style="display:none;">
+        <a href="/components/profile/profile.html" id="profile-link" class="dropdown-link">Profile</a>
+        <a href="#" class="dropdown-link">Notifications</a>
+        <a href="#" class="dropdown-link">Logout</a>
+      </div>
+    </div>
   </div>
 </div>

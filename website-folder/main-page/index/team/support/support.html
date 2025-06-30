@@ -6,13 +6,34 @@
     <title>Team</title>
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="/components/navbar/navbar.css" />
-    <link rel="stylesheet" href="/main-page/index/team/news/support.css" />
+    <link rel="stylesheet" href="/components/modal/modal.css" />
+    <link rel="stylesheet" href="/main-page/index/team/support/support.css" />
 </head>
 <body>
     <header>
-        <nav id = "navbar"></nav>
+        <nav id="navbar">
+            </div>
+        </nav>
     </header>
-    <script src = "/main.js"></script>
-    <script src = "/components/navbar/navbar.js"></script>
+
+    <main>
+        <div class="ticket-panel">
+            <div class="ticket-header">Support Ticket</div>
+            <form class="ticket-form">
+                <label for="ticket-title">Title</label>
+                <input type="text" id="ticket-title" name="ticket-title" required />
+
+                <label for="ticket-desc">Description</label>
+                <textarea id="ticket-desc" name="ticket-desc" rows="5" required></textarea>
+
+                <button type="submit" class="ticket-submit-btn">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="/main.js"></script>
+    <script src="/components/navbar/navbar.js"></script>   
+    <script src="/components/modal/modal.js"></script>
+    <script src="/main-page/index/team/support/support.js"></script>
 </body>
 </html>

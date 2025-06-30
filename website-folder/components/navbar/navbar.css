@@ -1,3 +1,4 @@
+/* NAVBAR BASE */
 .navbar {
   display: flex;
   align-items: center;
@@ -6,28 +7,32 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: darken(0.1);
+  background: #fff !important;
+  color: #111 !important;
+  border: 1.5px solid #111 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
+/* LOGO */
 .logo {
   height: 64px;
   width: auto;
   max-width: 8rem;
-  animation: 
-      breathe 2.4s ease-in-out infinite,
-      growl 3.2s ease infinite;
-  filter: drop-shadow(0 0 4px #fff);
+  filter: none !important;
   display: flex;
   align-items: center;
   margin-right: 1.6rem;
   transition: transform 0.16s;
+  background: #fff !important;
+  border: none !important;
 }
 
 .logo:hover {
-  animation: clawSwipe 0.4s ease;
   transform: scale(1.04) rotate(-1.6deg);
 }
 
+/* NAV LINKS */
 .nav-links {
   display: flex;
   list-style: none;
@@ -38,15 +43,16 @@
 
 .nav-links a {
   position: relative;
-  color: #b3c7f9;
+  color: #111 !important;
   text-decoration: none;
   font-size: 1.36rem;
   font-family: 'Segoe UI', 'Arial', sans-serif;
   letter-spacing: 1.6px;
   padding: 0.4rem 0.64rem;
   transition: color 0.24s, text-shadow 0.24s;
-  text-shadow: 0 1.6px 6.4px rgba(76, 196, 247, 0.384);
-  overflow: hidden;
+  text-shadow: none !important;
+  background: #fff !important;
+  border: none !important;
 }
 
 .nav-links a::after {
@@ -57,55 +63,54 @@
   transform: translateX(-50%) scaleX(0);
   width: 64%;
   height: 2.4px;
-  background: linear-gradient(90deg, #4fc3f7 0%, #1e2a78 100%);
-  border-radius: 1.6px;
+  background: #111 !important;
+  border-radius: 0 !important;
   transition: transform 0.32s cubic-bezier(.77,0,.18,1);
 }
 
 .nav-links a:hover {
-  color: #fff;
-  text-shadow: 0 0 8px #4fc3f7, 0 0 16px #1e2a78;
+  color: #111 !important;
+  text-shadow: none !important;
 }
 
 .nav-links a:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
+/* USER CONTROLS */
 .user-controls {
   display: flex;
   align-items: center;
 }
 
 .user-controls button {
-  background-color: #1e2a78;
+  background: #fff !important;
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #111 !important;
   padding: 0.4rem 0.96rem;
-  border-radius: 6.4px;
-  text-decoration: none;
+  border-radius: 0 !important;
   font-weight: bold;
-  border: none;
+  border: 1.5px solid #111 !important;
   cursor: pointer;
   transition: background 0.24s, box-shadow 0.24s;
-  box-shadow: 0 1.6px 6.4px rgba(76,195,247,0.10);
+  box-shadow: none !important;
 }
 
 .user-controls button:hover {
-  background-color: #4fc3f7;
-  color: #1e2a78;
-  box-shadow: 0 0 12.8px #4fc3f7;
+  background: #111 !important;
+  color: #fff !important;
+  box-shadow: none !important;
 }
 
+/* ANIMATIONS (keep scale, remove color/brightness) */
 @keyframes breathe {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.04); }
 }
-
 @keyframes growl {
-  0%, 100% { filter: brightness(1) contrast(1); }
-  50% { filter: brightness(1.08) contrast(1.08); }
+  0%, 100% { filter: none; }
+  50% { filter: none; }
 }
-
 @keyframes clawSwipe {
   0% { transform: rotate(0deg); }
   25% { transform: rotate(-4deg); }

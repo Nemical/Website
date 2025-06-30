@@ -169,33 +169,18 @@
     <!-- Player Details Modal Overlay -->
     <div id="player-modal-overlay" class="player-modal-overlay" style="display:none;">
       <div class="player-modal-container">
-        <!-- Left Modal -->
-        <div class="player-modal player-modal-left">
-          <div class="player-modal-section-title">Player Info</div>
-          <div class="player-modal-info-row"><b>Username:</b> <span id="modal-username"></span></div>
-          <div class="player-modal-info-row"><b>Rank:</b> <span id="modal-rank"></span></div>
-          <div class="player-modal-info-row"><b>Power Points:</b> <span id="modal-pp"></span></div>
-          <div class="player-modal-info-row"><b>Date:</b> <span id="modal-date"></span></div>
-          <div class="player-modal-info-row"><b>Status:</b> <span id="modal-status"></span></div>
-        </div>
-        <!-- Middle Modal -->
-        <div class="player-modal player-modal-middle">
-          <div class="player-modal-section-title">Player Data & Skills</div>
-          <img id="modal-skin" class="modal-skin-img" src="/pictures/skin_placeholder.png" alt="Player Skin" />
+        <!-- Player Info & Skills Modal -->
+        <div class="player-modal player-modal-info">
+          <div class="player-modal-section-title">Info</div>
+          <div class="player-modal-username" id="modal-username"></div>
+          <div class="player-modal-rankpp" id="modal-rankpp"></div>
+          <div class="player-modal-date" id="modal-date"></div>
           <div class="modal-skill-list" id="modal-skill-list"></div>
         </div>
-        <!-- Right Modal -->
+        <!-- Contributions Modal -->
         <div class="player-modal player-modal-right">
           <div class="player-modal-section-title">Contributions</div>
-          <div id="modal-contributions">
-            <span>
-              <span class="contribution-item-icon-wrapper">
-                <img class="contribution-item-bg" src="/pictures/hotbar.png" alt="">
-                <img class="contribution-item-icon" src="ITEM_NAME_HERE" alt="ITEM_NAME_HERE" />
-              </span>
-              ITEM_NAME_HERE
-            </span>
-          </div>
+          <div id="modal-contributions"></div>
         </div>
         <button class="player-modal-close" id="player-modal-close">&times;</button>
       </div>

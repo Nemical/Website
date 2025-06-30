@@ -162,17 +162,14 @@ document.querySelectorAll('.player-panel').forEach((panel, idx) => {
 
 function showPlayerModal(idx) {
   const player = playerData[idx];
-  // Left modal
-  document.getElementById('modal-username').textContent = player.username;
-  document.getElementById('modal-rank').textContent = player.rank;
-  document.getElementById('modal-pp').textContent = player.pp;
-  const statusSpan = document.getElementById('modal-status');
-  statusSpan.textContent = player.status;
-  statusSpan.className = player.status.toLowerCase();
-  document.getElementById('modal-date').textContent = player.date;
 
-  // Middle modal
-  document.getElementById('modal-skin').src = player.skin;
+  // Player Info & Skills modal
+  document.getElementById('modal-username').textContent = player.username;
+  document.getElementById('modal-rankpp').textContent = `(${player.rank} • ${player.pp}pp)`;
+  // Example: "26 months ago" (replace with your calculation logic if needed)
+  document.getElementById('modal-date').textContent = 'Joined: 26 months ago';
+
+  // Skills
   const skillList = document.getElementById('modal-skill-list');
   skillList.innerHTML = '';
   player.skills.forEach(skill => {
@@ -186,13 +183,12 @@ function showPlayerModal(idx) {
     skillList.appendChild(row);
   });
 
-  // Right modal
+  // Contributions modal (unchanged)
   const contribDiv = document.getElementById('modal-contributions');
   contribDiv.innerHTML = '';
   player.contributions.forEach(contrib => {
     const panel = document.createElement('div');
     panel.className = 'contribution-panel';
-    // Tooltip HTML as a string
     const tooltipHTML = `
       <div class="contribution-items-tooltip">
         ${contrib.items.map(item => `
@@ -212,7 +208,6 @@ function showPlayerModal(idx) {
       <div class="contribution-desc">${contrib.desc}</div>
       ${tooltipHTML}
     `;
-
     contribDiv.appendChild(panel);
   });
 

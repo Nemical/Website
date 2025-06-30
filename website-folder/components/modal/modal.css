@@ -1,7 +1,7 @@
 .modal-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(10, 18, 40, 0.85);
+  background: rgba(0,0,0,0.85) !important;
   z-index: 2000;
   display: flex;
   align-items: center;
@@ -9,25 +9,94 @@
   transition: background 0.3s;
 }
 
-.modal-box {
-  background: rgba(30, 42, 120, 0.95);
-  border-radius: 14.4px;
-  box-shadow: 0 0 25.6px 3.2px #4fc3f7, 0 0 0 3.2px #1e2a78;
-  border: 1.6px solid #4fc3f7;
-  padding: 2rem 2rem 1.6rem 2rem;
-  min-width: 272px;
-  max-width: 76vw;
-  position: relative;
-  color: #e3eaff;
+.modal-box,
+.news-modal-box {
+  background: #fff !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: 1.5px solid #111 !important;
+  color: #111 !important;
   animation: modalPop 0.25s cubic-bezier(.77,0,.18,1);
   align-items: center;
 }
 
-.news-modal-box {
-  max-width: 680px;
-  min-width: 320px;
-  width: 90vw;
-  padding: 2.4rem 2.4rem 2rem 2.4rem;
+/* Login/Register modal specific: restore original border, padding, and shadow, but keep black/white colors and no border-radius */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: stretch;
+  border: 2px solid #111 !important;      /* Restore original border thickness */
+  border-radius: 0 !important;            /* No border-radius */
+  background: #fff !important;            /* White background */
+  color: #111 !important;                 /* Black text */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12) !important; /* Restore original shadow, but black only */
+  padding: 2rem 2.5rem !important;        /* Restore original padding */
+}
+
+/* Style each label/input pair as a block */
+.modal-form label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #111 !important;
+}
+
+/* Login/Register modal input fields */
+.modal-form input {
+  border: 2px solid #111 !important;      /* Restore original border thickness */
+  border-radius: 0 !important;
+  background: #fff !important;
+  color: #111 !important;
+  box-shadow: none !important;
+  padding: 0.7rem 1rem !important;        /* Restore original input padding */
+  font-size: 1rem !important;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make the submit button full width and spaced */
+.modal-action-btn {
+  background: #111 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10) !important; /* Restore original shadow, but black only */
+  padding: 0.7rem 0 !important;
+  font-size: 1.08rem !important;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Tabs layout fix */
+.modal-tabs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.modal-tab {
+  background: none !important;
+  border: none !important;
+  color: #111 !important;
+  font-size: 1rem;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.8px;
+  padding: 0.6rem 2.2rem;
+  border-radius: 0 !important;
+  cursor: pointer;
+  border-bottom: 1.5px solid transparent !important;
+  transition: color 0.2s, border-bottom 0.2s, background 0.2s;
+}
+.modal-tab.active,
+.modal-tab:hover {
+  color: #fff !important;
+  border-bottom: 1.5px solid #111 !important;
+  background: #111 !important;
 }
 
 @keyframes modalPop {
@@ -41,114 +110,73 @@
   right: 1rem;
   background: none;
   border: none;
-  color: #4fc3f7;
+  color: #111 !important;
   font-size: 1.76rem;
   cursor: pointer;
   transition: color 0.2s;
   z-index: 10;
 }
 .modal-close:hover {
-  color: #fff;
+  color: #fff !important;
+  background: #111 !important;
 }
 
-/* ...rest of your modal styles (tabs, forms, etc.) ... */
-
-.modal-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  margin-bottom: 1.2rem;
-}
-
-.modal-tab {
-  background: none;
-  border: none;
-  color: #b3c7f9;
-  font-size: 0.96rem;
-  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
-  letter-spacing: 0.8px;
-  padding: 0.4rem 0.96rem;
-  border-radius: 6.4px 6.4px 0 0;
-  cursor: pointer;
-  border-bottom: 1.6px solid transparent;
-  transition: color 0.2s, border-bottom 0.2s, background 0.2s;
-}
-.modal-tab.active,
-.modal-tab:hover {
-  color: #4fc3f7;
-  border-bottom: 1.6px solid #4fc3f7;
-  background: rgba(30, 42, 120, 0.25);
-}
-
-.modal-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.modal-form label {
-  display: flex;
-  flex-direction: column;
-  color: #b3c7f9;
-  font-size: 0.8rem;
-  gap: 0.24rem;
-}
-
-.modal-form input {
-  background: rgba(20, 30, 80, 0.7);
-  border: 1.2px solid #4fc3f7;
-  border-radius: 5.6px;
-  color: #e3eaff;
-  padding: 0.48rem 0.8rem;
-  font-size: 0.8rem;
-  outline: none;
-  transition: border 0.2s, box-shadow 0.2s;
-  margin-top: 0.16rem;
-}
-.modal-form input:focus {
-  border: 1.2px solid #fff;
-  box-shadow: 0 0 6.4px #4fc3f7;
-}
-
-.modal-action-btn {
-  margin-top: 0.64rem;
-  background: linear-gradient(90deg, #4fc3f7 0%, #1e2a78 100%);
-  color: #fff;
-  border: none;
-  border-radius: 6.4px;
-  font-size: 0.88rem;
-  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
-  padding: 0.56rem 0;
-  cursor: pointer;
-  box-shadow: 0 1.6px 9.6px #4fc3f7aa;
-  transition: background 0.2s, color 0.2s;
-}
-.modal-action-btn:hover {
-  background: linear-gradient(90deg, #1e2a78 0%, #4fc3f7 100%);
-  color: #4fc3f7;
-}
-
-.modal-switch {
-  text-align: center;
-  margin-top: 0.8rem;
-  color: #b3c7f9;
-  font-size: 0.8rem;
-}
-
-.modal-link {
-  color: #4fc3f7;
-  text-decoration: underline;
-  cursor: pointer;
-  margin-left: 0.24rem;
-  transition: color 0.2s;
-}
-.modal-link:hover {
-  color: #fff;
-}
-
-@media (max-width: 500px) {
-  .modal-box {
-    padding: 0.96rem 0.4rem 0.96rem 0.4rem;
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .modal-box, .news-modal-box {
+    padding: 0.5rem !important;
     min-width: 0;
   }
+  .modal-form {
+    padding: 1rem !important;
+  }
+  .modal-tabs .modal-tab {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Dropdown wrapper positions the modal */
+.login-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* The dropdown modal itself */
+.login-dropdown-modal {
+  position: absolute;
+  top: 110%;
+  left: auto;
+  right: 0;
+  min-width: 140px;
+  background: #fff;
+  border: 1.5px solid #111;
+  border-radius: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  transition: opacity 0.18s;
+}
+
+/* Dropdown links */
+.dropdown-link {
+  color: #111;
+  background: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  text-align: left;
+  width: 100%;
+  display: block;
+}
+
+.dropdown-link:hover {
+  background: #111;
+  color: #fff;
 }

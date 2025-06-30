@@ -1,23 +1,33 @@
-.background-wrapper {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  overflow: hidden;
+.background-wrapper,
+.blur-bg,
+.not-blurred,
+.panel-selector,
+.panel-selector h1,
+.panels,
+.panel,
+.panel img,
+.panel span,
+.panel:hover,
+.panel-selector h1,
+a {
+  color: #111 !important;
+  background: #fff !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
 
-.blur-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
+.panel:hover {
+  transform: scale(1.064);
 }
 
-.not-blurred {
-  position: relative;
-  z-index: 2;
-  color: white;
+@keyframes pulse-glow {
+  0%,
+  50%,
+  100% {
+    color: #111 !important;
+    text-shadow: none !important;
+  }
 }
 
 /* Panel Selector Overlay */
@@ -30,10 +40,13 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #d4e1ff;
-  text-shadow: 0 0 8px #4fc3f7;
+  color: #111 !important;
+  text-shadow: none !important;
   padding: 0 1.6rem;
   backdrop-filter: none;
+  background: #fff !important;
+  border: 1.5px solid #111 !important;
+  border-radius: 0 !important;
 }
 
 .panel-selector h1 {
@@ -48,9 +61,10 @@
 }
 
 .panel {
-  background: rgba(255, 255, 255, 0.05);
+  background: #fff !important;
   padding: 1.2rem;
-  border-radius: 9.6px;
+  border: 1.5px solid #111 !important;
+  border-radius: 0 !important;
   transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 
@@ -58,41 +72,35 @@
   width: 256px;
   height: 256px;
   object-fit: cover;
-  border-radius: 9.6px;
-  border: 2.4px solid #4fc3f7;
-  box-shadow: 0 0 16px #4fc3f7;
+  border-radius: 0 !important;
+  border: 1.5px solid #111 !important;
+  box-shadow: none !important;
   transition: all 0.24s ease;
+  background: #000 !important;
 }
 
 .panel span {
   display: block;
   margin-top: 1.2rem;
   font-size: 2rem;
-  color: #ffd700;
-  animation: pulse-glow 1.6s infinite;
+  color: #111 !important;
+  animation: none !important;
 }
 
 .panel:hover {
   transform: scale(1.064);
-  box-shadow: 0 0 24px #4fc3f7;
 }
 
 .panel:hover img {
-  box-shadow: 0 0 24px #ffffff;
+  box-shadow: none !important;
 }
 
 @keyframes pulse-glow {
-  0% {
-    color: #ffd700;
-    text-shadow: 0 0 4px rgba(255, 215, 0, 0.5);
-  }
-  50% {
-    color: #ffaa00;
-    text-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
-  }
+  0%,
+  50%,
   100% {
-    color: #ffd700;
-    text-shadow: 0 0 4px rgba(255, 215, 0, 0.5);
+    color: #111 !important;
+    text-shadow: none !important;
   }
 }
 
@@ -114,4 +122,7 @@
 }
 a {
   text-decoration: none;
+  color: #111 !important;
+  border-radius: 0 !important;
+  background: #fff !important;
 }
