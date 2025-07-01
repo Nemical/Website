@@ -123,9 +123,7 @@ function setupLoginDropdown() {
   if (profileLink) {
     profileLink.addEventListener('click', function(e) {
       e.preventDefault();
-      window.location.href = '/profile.html';
-      // Or fetch dynamically:
-      // fetch('/api/getProfileUrl').then(res => res.text()).then(url => window.location.href = url);
+      window.location.href = '/components/profile/profile.html';
     });
   }
 }
