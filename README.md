@@ -1,2 +1,2 @@
 # Website
-A blacl & white design of a template for Night website
+A black & white design of a template for Night website
